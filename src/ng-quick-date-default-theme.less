@@ -1,5 +1,6 @@
 @popup-font-color: #333;
 @button-bg-color: #fff;
+@disabled-button-bg-color: #ebebe4;
 @button-text-color: #333;
 @button-border-color: #ccc;
 @popup-bg-color: #fafafa;
@@ -39,6 +40,12 @@
   }
 }
 
+.quickdate[disabled] .quickdate-button {
+    background: @disabled-button-bg-color;
+    &:hover {
+        text-decoration: none;
+    }
+}
 
 .quickdate-popup {
   color: @popup-font-color;

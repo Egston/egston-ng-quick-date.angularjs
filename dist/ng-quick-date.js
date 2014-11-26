@@ -273,6 +273,9 @@
             }
           });
           scope.toggleCalendar = debounce(function(show) {
+            if (angular.element(element).attr('disabled')) {
+              show = false;
+            }
             if (isFinite(show)) {
               return scope.calendarShown = show;
             } else {
