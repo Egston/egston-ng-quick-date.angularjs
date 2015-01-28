@@ -59,6 +59,7 @@ There are a number of options that be configured inline with attributes. Here ar
 
 | Option               | Default             | Description                                                                                 |
 | -------------------- | ------------------- | ------------------------------------------------------------------------------------------- |
+| std-week             | false               | Make Monday the first day of the week (according to ISO 8601)                            |
 | date-format          | "M/d/yyyy"          | Date Format used in the date input box.                                                     |
 | time-format          | "h:mm a"            | Time Format used in the time input box.                                                     |
 | label-format         | null                | Date/Time format used on button. If null, will use combination of date and time formats.    |
