@@ -13,6 +13,7 @@ app = angular.module("ngQuickDate", [])
 app.provider "ngQuickDateDefaults", ->
   {
     options: {
+      stdWeek: false # Makes Monday the first day of the week
       dateFormat: 'M/d/yyyy'
       timeFormat: 'h:mm a'
       labelFormat: null
@@ -139,6 +140,8 @@ app.directive "quickDatepicker", ['ngQuickDateDefaults', '$filter', '$sce', (ngQ
     # Uses scope.calendarDate to decide which month to show
     setupCalendarView = ->
       offset = scope.calendarDate.getDay()
+      if scope.stdWeek
+        offset = if offset then offset - 1 else 6
       daysInMonth = getDaysInMonth(scope.calendarDate.getFullYear(), scope.calendarDate.getMonth())
       numRows = Math.ceil((offset + daysInMonth) / 7)
       weeks = []

@@ -159,7 +159,7 @@ table.quickdate-calendar td.other-month:hover {
 }
 table.quickdate-calendar td.disabled-date {
   background-color: inherit;
-  color: #ffffff;
+  color: #b3b3b3;
 }
 table.quickdate-calendar td.disabled-date:hover {
   background-color: inherit;

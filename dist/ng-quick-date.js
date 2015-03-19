@@ -6,6 +6,7 @@
   app.provider("ngQuickDateDefaults", function() {
     return {
       options: {
+        stdWeek: false,
         dateFormat: 'M/d/yyyy',
         timeFormat: 'h:mm a',
         labelFormat: null,
@@ -146,6 +147,9 @@
           setupCalendarView = function() {
             var curDate, d, day, daysInMonth, numRows, offset, row, selected, time, today, weeks, _i, _j, _ref;
             offset = scope.calendarDate.getDay();
+            if (scope.stdWeek) {
+              offset = offset ? offset - 1 : 6;
+            }
             daysInMonth = getDaysInMonth(scope.calendarDate.getFullYear(), scope.calendarDate.getMonth());
             numRows = Math.ceil((offset + daysInMonth) / 7);
             weeks = [];
