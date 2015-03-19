@@ -27,6 +27,12 @@
 .quickdate-button i {
   padding-right: 4px;
 }
+.quickdate[disabled] .quickdate-button {
+  background: #ebebe4;
+}
+.quickdate[disabled] .quickdate-button:hover {
+  text-decoration: none;
+}
 .quickdate-popup {
   color: #333333;
   font-size: 15px;

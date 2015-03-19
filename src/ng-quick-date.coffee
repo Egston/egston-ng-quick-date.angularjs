@@ -275,6 +275,8 @@ app.directive "quickDatepicker", ['ngQuickDateDefaults', '$filter', '$sce', (ngQ
     # ==================================
     scope.toggleCalendar = debounce(
       (show) ->
+        if angular.element(element).attr('disabled')
+          show = false
         if isFinite(show)
           scope.calendarShown = show
         else
