@@ -1,0 +1,37 @@
+{
+    "name": "components/egston-angular-ng-quick-date.js",
+    "type": "component",
+    "description": "Egston fork of ng-quick-date",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Adam Albrecht"
+        },
+        {
+            "name": "Egston"
+        }
+    ],
+    "support": {
+        "email": "petr.gajdusek@egston.com",
+        "source": "ssh://devintranet:/data/git/components/egston-angular-ng-quick-date.js.git"
+    },
+    "extra": {
+        "component": {
+            "scripts": [
+                "dist/ng-quick-date.js"
+            ],
+            "styles": [
+                "dist/ng-quick-date.css",
+                "dist/ng-quick-date-default-theme.css",
+                "dist/ng-quick-date-plus-default-theme.css"
+            ],
+            "files": [
+                "dist/ng-quick-date.min.js"
+            ]
+        }
+    },
+    "require": {
+        "robloach/component-installer": "*",
+        "components/angular.js": "1.2.x"
+    }
+}
