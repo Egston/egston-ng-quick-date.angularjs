@@ -1,8 +1,14 @@
-## Deprecated:
+# Regarding this fork
 
-Sorry everyone, but I just don't have time to work on this anymore. Also, after using this in my own app, I realized that it was lacking in some fundamental ways. I think what is really needed is a good polyfill for `<input type='date'>` and `<input type='datetime-local'>`. Unfortunately, I don't know of any great ones. If someone were to start on a better one, I'd love to contribute. And if anyone wants to maintain this project, please let me know.
+This is a fork of the original [ngQuickDate](https://github.com/gildorwang/ngQuickDate) by [Adam Albrecht](https://github.com/adamalbrecht).
+There are several improvements over the original version:
 
-Adam
+* Support of UTC timezone
+* Data-binding of configurations (`timezone`, `disableTimepicker`, `disableClearButton`, more to be supported)
+* Clicking on a date will not close the calendar pop-out if timepicker is not disabled
+* Time is set to `defaultTime` when date is inputed (by the textbox or mouse click)
+
+Note: To support the timezone feature, the dependency of Angular is upgraded to 1.3+.
 
 ---
 
@@ -14,9 +20,9 @@ ngQuickDate is an [Angular.js](http://angularjs.org/) Date/Time picker directive
 
 ## Download
 
-* [Version 1.3.3](https://github.com/adamalbrecht/ngQuickDate/archive/1.3.3.zip)
+* [Version 1.4.0](https://github.com/gildorwang/ngQuickDate/archive/v1.4.0.zip)
 
-* Only compatible with Angular 1.2.x. For a version compatible with Angular 1.0.x, checkout the angular-1.0 branch.
+* Only compatible with Angular 1.3.x. For a version compatible with Angular 1.0.x, checkout the angular-1.0 branch.
 
 You can also install the package using [Bower](http://bower.io).
 
@@ -60,8 +66,8 @@ There are a number of options that be configured inline with attributes. Here ar
 | Option               | Default             | Description                                                                                 |
 | -------------------- | ------------------- | ------------------------------------------------------------------------------------------- |
 | std-week             | false               | Make Monday the first day of the week (according to ISO 8601)                            |
-| date-format          | "M/d/yyyy"          | Date Format used in the date input box.                                                     |
-| time-format          | "h:mm a"            | Time Format used in the time input box.                                                     |
+| date-format          | "M/d/yyyy"          | Date Format used in the date input box. Has no effect in UTC mode.                          |
+| time-format          | "h:mm a"            | Time Format used in the time input box. Has no effect in UTC mode.                          |
 | label-format         | null                | Date/Time format used on button. If null, will use combination of date and time formats.    |
 | placeholder          | 'Click to Set Date' | Text that is shown on button when the model variable is null.                               |
 | required             | false               | Makes the field required. Will set $invalid on the control and the form otherwise           |
@@ -73,11 +79,16 @@ There are a number of options that be configured inline with attributes. Here ar
 | default-time         | null                | Time that will be set when you click on a date on the calendar. Must be in 24-hour format.  |
 | init-value           | null                | Set the initial value of the date inline as a string. Will be immediately parsed and set as the value of your model.|
 | date-filter          | null                | Set to a function to enable/disable dates. Useful for disabling weekends, etc. [See more below](#date-filter-function) |
+| timezone             | null                | Set to `'UTC'` to use UTC timezone.                                                         |
 
 **Example:**
 
 ```html
 <quick-datepicker ng-model='myDate' date-format='EEEE, MMMM d, yyyy' placeholder='Pick a Date' disable-timepicker='true'></quick-datepicker>
+```
+
+```html
+<quick-datepicker ng-model='myDate' placeholder='Pick a Date' disable-timepicker='true' timezone='UTC'></quick-datepicker>
 ```
 
 ## Configuration Options
