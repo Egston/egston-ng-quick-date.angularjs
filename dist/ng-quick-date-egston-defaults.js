@@ -25,6 +25,9 @@ angular.module('ngQuickDateEgstonDefaults', ['ngQuickDate'])
         dayAbbreviations: ["M", "Tu", "W", "Th", "F", "Sa", "Su"],
         disableTimepicker: true,
         dateFilter: function(d) {
+            if (!d) {
+                return true;
+            }
             var wday = d.getDay();
             var day = d.getDate();
             var month = d.getMonth();
