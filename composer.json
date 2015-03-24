@@ -17,6 +17,7 @@
     },
     "extra": {
         "component": {
+            "name": "ng-quick-date",
             "scripts": [
                 "dist/ng-quick-date.js"
             ],
