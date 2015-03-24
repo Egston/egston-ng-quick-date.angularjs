@@ -32,7 +32,6 @@
         }
     },
     "require": {
-        "robloach/component-installer": "*",
         "components/angular.js": "1.2.x"
     }
 }
