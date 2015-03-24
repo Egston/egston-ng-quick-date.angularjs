@@ -19,7 +19,8 @@
         "component": {
             "name": "ng-quick-date",
             "scripts": [
-                "dist/ng-quick-date.js"
+                "dist/ng-quick-date.js",
+                "dist/ng-quick-date-egston-defaults.js"
             ],
             "styles": [
                 "dist/ng-quick-date.css",
@@ -27,7 +28,8 @@
                 "dist/ng-quick-date-plus-default-theme.css"
             ],
             "files": [
-                "dist/ng-quick-date.min.js"
+                "dist/ng-quick-date.min.js",
+                "dist/ng-quick-date-egston-defaults.min.js"
             ]
         }
     },

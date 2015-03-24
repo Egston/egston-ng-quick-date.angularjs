@@ -3,6 +3,12 @@ module.exports = function(grunt) {
   // Project configuration.
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
+    copy: {
+        files: {
+            src: "src/ng-quick-date-egston-defaults.js",
+            dest: "dist/ng-quick-date-egston-defaults.js"
+        }
+    },
     coffee: {
       compile: {
         files: {
@@ -14,7 +20,8 @@ module.exports = function(grunt) {
     uglify: {
       my_target: {
         files: {
-          "dist/ng-quick-date.min.js": "dist/ng-quick-date.js"
+          "dist/ng-quick-date.min.js": "dist/ng-quick-date.js",
+          "dist/ng-quick-date-egston-defaults.min.js": "dist/ng-quick-date-egston-defaults.js"
         }
       }
     },
@@ -29,8 +36,8 @@ module.exports = function(grunt) {
     },
     watch: {
       scripts: {
-        files: ['**/*.coffee', '**/*.less'],
-        tasks: ['coffee', 'uglify', 'less'],
+        files: ['**/*.coffee', '**/*.less', 'src/*.js'],
+        tasks: ['default', 'copy', 'coffee', 'uglify', 'less'],
         options: {
           debounceDelay: 250,
         },
@@ -38,10 +45,11 @@ module.exports = function(grunt) {
     }
   });
 
+  grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-coffee');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-watch');
 
-  grunt.registerTask('default', ['coffee', 'uglify', 'less', 'watch']);
+  grunt.registerTask('default', ['copy', 'coffee', 'uglify', 'less', 'watch']);
 };
