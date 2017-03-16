@@ -19,6 +19,28 @@ angular.module('ngQuickDateEgstonDefaults', ['ngQuickDate'])
     return m;
     };
 
+    /**
+     * Return date of Good Friday in year is >= 2017
+     * (it's holiday since 2017 in Czech Republic)
+     *
+     * @param {Number} Y    Year
+     * @returns {Date|null}
+     */
+    var getGoodFriday = function(Y) {
+        if (Y >= 2017) {
+            var good_friday = new Date();
+            var easter_monday = getEasterMonday(Y);
+
+            good_friday.setTime(
+                easter_monday.getTime() - 1000 * 60 * 60 * 24 * 3
+            );
+        } else {
+            var good_friday = null;
+        }
+
+        return good_friday;
+    };
+
     return ngQuickDateDefaultsProvider.set({
         stdWeek: true,
         timezone: 'UTC',
@@ -31,7 +53,8 @@ angular.module('ngQuickDateEgstonDefaults', ['ngQuickDate'])
             var wday = d.getDay();
             var day = d.getDate();
             var month = d.getMonth();
-            var easter = getEasterMonday(d.getFullYear());
+            var easter_monday = getEasterMonday(d.getFullYear());
+            var good_friday = getGoodFriday(d.getFullYear());
             var is_holiday = (
                     // Public holidays in Czech Republic
                     wday === 0 || wday === 6
@@ -47,8 +70,12 @@ angular.module('ngQuickDateEgstonDefaults', ['ngQuickDate'])
                     || (day === 25 && month === 11)
                     || (day === 26 && month === 11)
                     // Eastern Monday
-                    || (day === easter.getDate()
-                        && month === easter.getMonth())
+                    || (day === easter_monday.getDate()
+                        && month === easter_monday.getMonth())
+                    // Good Friday (in Czech Republic holiday since 2017)
+                    || (good_friday
+                        && day === good_friday.getDate()
+                        && month === good_friday.getMonth())
                 );
             return !is_holiday;
         }
