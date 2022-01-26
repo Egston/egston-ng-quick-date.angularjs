@@ -1,14 +1,29 @@
 {
   "name": "ngQuickDate",
+  "description": "Egston fork of ngQuickDate",
+  "license": "MIT",
   "version": "3.1.2",
+  "dependencies": {
+    "angular": "^1.3.0"
+  },
+  "contributors": [
+    "Adam Albrecht",
+    "Egston"
+  ],
   "devDependencies": {
-    "grunt": "~0.4.1",
-    "grunt-contrib-copy": "~0.8",
-    "grunt-contrib-coffee": "~0.7",
-    "grunt-contrib-watch": "~0.5",
-    "grunt-contrib-uglify": "~0.2",
-    "karma": "~0.10",
-    "karma-coffee-preprocessor": "~0.1",
-    "grunt-contrib-less": "~0.8.2"
+    "angular-mocks": "^1.3.0",
+    "grunt-cli": "^1",
+    "grunt-contrib-coffee": "^2",
+    "grunt-contrib-copy": "^0.8",
+    "grunt-contrib-less": "^0.8.2",
+    "grunt-contrib-uglify": "^4",
+    "grunt-contrib-watch": "^0.5",
+    "jasmine-core": "^3.6.0",
+    "jquery": "^3",
+    "karma": "^6",
+    "karma-chrome-launcher": "^3.1.0",
+    "karma-coffee-preprocessor": "^1",
+    "karma-firefox-launcher": "^2.1.2",
+    "karma-jasmine": "^4"
   }
 }

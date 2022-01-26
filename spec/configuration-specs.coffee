@@ -84,7 +84,7 @@ describe "ngQuickDate", ->
           scope.$digest()
 
         it 'does not display the inline class and not the configured default html in the button', ->
-          expect($(element).find('.quickdate-button').html()).toNotMatch('icon-time')
+          expect($(element).find('.quickdate-button').html()).not.toMatch('icon-time')
           expect($(element).find('.quickdate-button').html()).toMatch('icon-calendar')
 
     describe 'Given a default-configured datepicker', ->
@@ -116,11 +116,11 @@ describe "ngQuickDate", ->
       describe 'and given a datepicker with timepicker re-enabled', ->
         beforeEach(angular.mock.inject(($compile, $rootScope) ->
           $rootScope.myDate = new Date(2013, 10, 1)
-          element = $compile("<quick-datepicker ng-model='myDate' disable-timepicker='false' />")(scope)
+          element = $compile("<quick-datepicker ng-model='myDate' disable-timepicker='false' />")($rootScope)
           $rootScope.$digest()
         ))
         it 'shows the timepicker input', ->
-          expect($(element).find('.quickdate-input-wrapper:last').hasClass('ng-hide')).toNotEqual(true)
+          expect($(element).find('.quickdate-input-wrapper:last').hasClass('ng-hide')).not.toEqual(true)
 
 
     describe 'Given that it is configured with a custom date/time parser function that always returns July 1, 2013', ->

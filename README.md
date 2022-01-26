@@ -18,23 +18,23 @@ ngQuickDate is an [Angular.js](http://angularjs.org/) Date/Time picker directive
 
 ![ngQuickDate Screenshot](https://raw.github.com/adamalbrecht/ngQuickDate/master/screenshot.png)
 
-## Download
+## Installation
 
-* [Version 1.4.0](https://github.com/gildorwang/ngQuickDate/archive/v1.4.0.zip)
+You can install the pacakge using [npm](npmjs.com):
 
-* Only compatible with Angular 1.3.x. For a version compatible with Angular 1.0.x, checkout the angular-1.0 branch.
-
-You can also install the package using [Bower](http://bower.io).
-
-```sh
-bower install ngQuickDate
+```bash
+$ npm install git+ssh://git@gitlab.devops.egston.local:Libraries/Egston/egston-angular-ng-quick-date.js.git --save
 ```
 
-Or add it to your bower.json file:
+Or add it to your package.json:
 
-```javascript
-dependencies: {
-  "ngQuickDate": "~1.3.0"
+```json
+{
+   // ...
+   "dependencies": {
+        "ngQuickDate": "*"
+    },
+    // ...
 }
 ```
 
@@ -202,7 +202,7 @@ Contributions are welcome. Whenever possible, please include test coverage with 
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
 
-To get the project running, you'll need [NPM](https://npmjs.org/) and [Bower](http://bower.io/). Run `npm install` and `bower install` to install all dependencies. Then run `grunt` in the project directory to watch and compile changes. And you can run `karma start` to watch for changes and auto-execute unit tests.
+To get the project running, you'll need [NPM](https://npmjs.org/). Run `npm install` to install all dependencies. Then run `grunt` in the project directory to watch and compile changes. And you can run `karma start` to watch for changes and auto-execute unit tests.
 
 ## Potential Features down the road
 

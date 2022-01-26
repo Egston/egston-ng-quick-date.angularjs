@@ -3,7 +3,7 @@ module.exports = (config) ->
   config.set
     autoWatch: true
     frameworks: ['jasmine']
-    browsers: ['PhantomJS']
+    browsers: ['Chromium', 'Firefox']
     preprocessors: {
       '**/*.coffee': ['coffee'],
     }
@@ -15,10 +15,16 @@ module.exports = (config) ->
       transformPath: (path) -> path.replace(/\.js$/, '.coffee')
     }
     files: [
-      'bower_components/angular/angular.js'
-      'bower_components/angular-mocks/angular-mocks.js'
-      'bower_components/jquery/jquery.js'
+      'node_modules/angular/angular.js'
+      'node_modules/angular-mocks/angular-mocks.js'
+      'node_modules/jquery/dist/jquery.js'
       'vendor/browserTrigger.js'
-      'src/*.coffee'
-      'spec/*.coffee'
+      {
+        pattern: 'src/*.coffee'
+        type: 'js'
+      }
+      {
+        pattern: 'spec/*.coffee'
+        type: 'js'
+      }
     ]
