@@ -13,7 +13,7 @@
     ],
     "support": {
         "email": "petr.gajdusek@egston.com",
-        "source": "ssh://devintranet:/data/git/components/egston-angular-ng-quick-date.js.git"
+        "source": "https://gitlab.devops.egston.local/Libraries/Egston/egston-angular-ng-quick-date.js"
     },
     "extra": {
         "component": {
