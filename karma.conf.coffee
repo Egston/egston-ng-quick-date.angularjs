@@ -5,9 +5,9 @@ module.exports = (config) ->
     frameworks: ['jasmine']
     browsers: ['Chromium', 'Firefox']
     preprocessors: {
-      '**/*.coffee': ['coffee'],
+      '**/*.coffee': ['coffee2'],
     }
-    coffeePreprocessor: {
+    coffee2Preprocessor: {
       options: {
         bare: true,
         sourceMap: false
