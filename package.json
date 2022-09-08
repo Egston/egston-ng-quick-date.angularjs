@@ -2,7 +2,7 @@
   "name": "@egston/ng-quick-date.angularjs",
   "description": "Egston fork of ngQuickDate",
   "license": "MIT",
-  "version": "4.0.0",
+  "version": "5.0.0",
   "dependencies": {
     "angular": "^1.3.0"
   },
