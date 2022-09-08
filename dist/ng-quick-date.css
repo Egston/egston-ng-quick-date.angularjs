@@ -83,8 +83,8 @@ table.quickdate-calendar td:hover {
   display: block;
 }
 .quickdate input.ng-invalid {
-  border: 1px solid #dd3b30;
+  border: 1px solid #DD3B30;
 }
 .quickdate input.ng-invalid:focus {
-  outline-color: #dd3b30;
+  outline-color: #DD3B30;
 }

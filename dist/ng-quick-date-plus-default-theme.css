@@ -83,10 +83,10 @@ table.quickdate-calendar td:hover {
   display: block;
 }
 .quickdate input.ng-invalid {
-  border: 1px solid #dd3b30;
+  border: 1px solid #DD3B30;
 }
 .quickdate input.ng-invalid:focus {
-  outline-color: #dd3b30;
+  outline-color: #DD3B30;
 }
 
 .quickdate {
@@ -100,9 +100,9 @@ table.quickdate-calendar td:hover {
   font-size: 13px;
 }
 .quickdate-button {
-  background: #ffffff;
-  color: #333333;
-  border: solid 1px #cccccc;
+  background: #fff;
+  color: #333;
+  border: solid 1px #ccc;
   box-shadow: outset 0 1px 1px rgba(0, 0, 0, 0.075);
   border-radius: 4px;
   padding: 4px 8px;
@@ -125,10 +125,10 @@ table.quickdate-calendar td:hover {
   text-decoration: none;
 }
 .quickdate-popup {
-  color: #333333;
+  color: #333;
   font-size: 15px;
   background-color: #fafafa;
-  border: solid 1px #dddddd;
+  border: solid 1px #ddd;
   border-radius: 3px;
   -webkit-box-shadow: 0px 10px 30px rgba(25, 25, 25, 0.92);
   -moz-box-shadow: 0px 10px 30px rgba(25, 25, 25, 0.92);
@@ -136,7 +136,7 @@ table.quickdate-calendar td:hover {
 }
 .quickdate-action-link:visited,
 .quickdate-action-link:hover {
-  color: #333333;
+  color: #333;
 }
 .quickdate-next-month i {
   padding-left: 10px;
@@ -146,7 +146,7 @@ table.quickdate-calendar td:hover {
 }
 table.quickdate-calendar {
   border: solid 1px #ccc;
-  background-color: #ffffff;
+  background-color: #fff;
 }
 table.quickdate-calendar th,
 table.quickdate-calendar td {
@@ -176,7 +176,7 @@ table.quickdate-calendar td.selected {
   font-weight: bold;
 }
 table.quickdate-calendar td.is-today {
-  color: #b58922;
+  color: #B58922;
   font-weight: bold;
 }
 table.quickdate-calendar td.is-today.disabled-date {
@@ -189,9 +189,9 @@ table.quickdate-calendar td.is-today.disabled-date {
 .quickdate-clear {
   display: inline-block;
   padding: 2px 4px;
-  background-color: #ffffff;
-  color: #333333;
-  border: solid 1px #cccccc;
+  background-color: #fff;
+  color: #333;
+  border: solid 1px #ccc;
   box-shadow: outset 0 1px 1px rgba(0, 0, 0, 0.075);
   border-radius: 4px;
   text-decoration: none;
