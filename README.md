@@ -23,7 +23,7 @@ ngQuickDate is an [Angular.js](http://angularjs.org/) Date/Time picker directive
 You can install the pacakge using [npm](npmjs.com):
 
 ```bash
-$ npm install git+ssh://git@gitlab.devops.egston.local:Libraries/Egston/egston-angular-ng-quick-date.js.git --save
+$ npm install github:Egston/egston-ng-quick-date.angularjs.git --save
 ```
 
 Or add it to your package.json:
